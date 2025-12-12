@@ -7,6 +7,7 @@ const Slide14 = () => {
             <div className="s14-header">
                 <h2>ご提供する2つのプラン比較</h2>
                 <p className="s14-sub-text">導入目的に合わせた最適なプランをお選びいただけます</p>
+                <div className="s14-accent-line"></div>
             </div>
 
             <div className="s14-table-container">

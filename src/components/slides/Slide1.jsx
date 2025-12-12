@@ -1,34 +1,37 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import './Slide1.css';
 
-const Slide1 = ({ isActive }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isActive) {
-      const ctx = gsap.context(() => {
-        gsap.fromTo("h1", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" });
-        gsap.fromTo(".subtitle", { y: 20, opacity: 0 }, { y: 0, opacity: 1, delay: 0.5, duration: 1 });
-        gsap.fromTo(".line", { width: 0 }, { width: "100px", delay: 0.8, duration: 1, ease: "power2.out" });
-      }, containerRef);
-      return () => ctx.revert();
-    }
-  }, [isActive]);
-
+const Slide1 = () => {
   return (
-    <div className={`slide-container ${isActive ? 'active' : ''}`} ref={containerRef}>
-      <div className="flex-col" style={{alignItems: 'center'}}>
-        <p className="subtitle" style={{ letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-          Strategic Business Solution
-        </p>
-        <h1 style={{textAlign: 'center'}}>
-          COST STRUCTURE<br />
-          <span style={{ color: 'var(--text-secondary)', fontSize: '3rem' }}>REFORMATION</span>
-        </h1>
-        <div className="line" style={{ height: '4px', background: 'var(--accent-gold)', margin: '2rem 0' }}></div>
-        <p style={{ fontSize: '1.2rem' }}>就労支援スキーム活用型・経営改革支援</p>
-      </div>
+    <div className="slide1-wrapper">
+
+      <h1 className="s1-title">
+        <p className="s1-main">就労支援フランチャイズ</p>
+        <div className="s1-accent-bar"></div>
+        <p>コスト構造改革支援事業</p>
+      </h1>
+
+      <p className="s1-subtitle">
+        ノンコア業務のコスト削減と<br />
+        安定した労働力確保を同時に実現
+      </p>
+
+      <ul className="s1-features">
+        <li>
+          <span className="s1-check"><i className="fa-solid fa-check"></i></span>
+          2年間の実証済みモデル
+        </li>
+        <li>
+          <span className="s1-check"><i className="fa-solid fa-check"></i></span>
+          初期費用110万円から
+        </li>
+        <li>
+          <span className="s1-check"><i className="fa-solid fa-check"></i></span>
+          御社の課題に向き合う伴奏型支援
+        </li>
+      </ul>
     </div>
   );
 };
+
 export default Slide1;

@@ -1,53 +1,84 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import './Slide6.css';
 
-const Slide6 = ({ isActive }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isActive) {
-      const ctx = gsap.context(() => {
-        gsap.from(".step-box", { x: -30, opacity: 0, stagger: 0.3, duration: 0.8 });
-        gsap.from(".arrow-icon", { opacity: 0, x: -10, stagger: 0.3, delay: 0.2, duration: 0.8 });
-      }, containerRef);
-      return () => ctx.revert();
-    }
-  }, [isActive]);
-
+const Slide6 = () => {
   return (
-    <div className={`slide-container ${isActive ? 'active' : ''}`} ref={containerRef}>
-      <h2>業務品質の担保</h2>
-      <p style={{ marginBottom: '4rem' }}>障害特性に合わせたマニュアル化と、徹底したWチェック体制。</p>
-      
-      <div className="flex-row" style={{ alignItems: 'center', justifyContent: 'center' }}>
-        
-        <div className="card step-box" style={{ width: '250px' }}>
-          <div style={{ background: '#f0f0f0', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', fontWeight: 'bold' }}>01</div>
-          <i className="fa-solid fa-list-check fa-2x" style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}></i>
-          <h3>標準化</h3>
-          <p className="sub-caption">業務の切り出しと<br/>マニュアル作成</p>
+    <div className="slide6-wrapper">
+      <div className="s6-header">
+        <h2>高工賃でもなお事業伸長</h2>
+        <p className="s6-sub-text">すべてのステークホルダーに価値をもたらす両立モデル</p>
+        <div className="s6-accent-line"></div>
+      </div>
+
+      <div className="s6-content">
+        {/* 左側：工賃実績 */}
+        <div className="s6-left-panel">
+          <div className="s6-card">
+            <h3>B型工賃実績</h3>
+            <div className="s6-highlight-price">
+              50,000<span className="unit">円/月</span>
+            </div>
+            <div className="s6-comparison-box">
+              <p>全国平均比: <strong>2.17倍</strong></p>
+              <span className="small-note">※全国平均工賃: 23,053円/月</span>
+            </div>
+          </div>
         </div>
 
-        <i className="fa-solid fa-angle-right fa-2x arrow-icon" style={{ color: 'var(--accent-gold)' }}></i>
+        {/* 右側：成長グラフ */}
+        <div className="s6-right-panel">
+          <div className="s6-card">
+            <h3>持続的な成長を実現</h3>
+            <div className="s6-chart-area">
+              <div className="s6-chart-legend">
+                <span className="legend-item blue"></span> 出荷処理量
+                <span className="legend-item cyan"></span> B型平均工賃
+              </div>
 
-        <div className="card step-box" style={{ width: '250px' }}>
-          <div style={{ background: '#f0f0f0', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', fontWeight: 'bold' }}>02</div>
-          <i className="fa-solid fa-users-viewfinder fa-2x" style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}></i>
-          <h3>作業</h3>
-          <p className="sub-caption">特性に合った配置と<br/>集中作業</p>
+              {/* CSSで描く簡易グラフ */}
+              <div className="s6-graph-container">
+                <svg viewBox="0 0 400 200" className="s6-svg">
+                  {/* グリッド */}
+                  <line x1="0" y1="180" x2="400" y2="180" stroke="#eee" />
+                  <line x1="0" y1="100" x2="400" y2="100" stroke="#eee" />
+
+                  {/* 折れ線1: 出荷量 (濃い青) */}
+                  <polyline points="20,160 110,140 200,110 290,80 380,50"
+                    fill="none" stroke="#0044CC" strokeWidth="4" />
+                  <circle cx="20" cy="160" r="4" fill="#0044CC" />
+                  <circle cx="380" cy="50" r="4" fill="#0044CC" />
+
+                  {/* 折れ線2: 工賃 (水色) */}
+                  <polyline points="20,170 110,150 200,130 290,100 380,80"
+                    fill="none" stroke="#00A0E9" strokeWidth="4" />
+                  <circle cx="20" cy="170" r="4" fill="#00A0E9" />
+                  <circle cx="380" cy="80" r="4" fill="#00A0E9" />
+                </svg>
+                <div className="s6-axis-x">
+                  <span>2022 Q1</span>
+                  <span>Q2</span>
+                  <span>Q3</span>
+                  <span>Q4</span>
+                  <span>2023 Q1</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="s6-stats-grid">
+              <div className="s6-stat-box">
+                <p>出荷処理量（前年比）</p>
+                <div className="stat-val">+32% <span className="up-arrow">↑</span></div>
+              </div>
+              <div className="s6-stat-box">
+                <p>EC事業売上（前年比）</p>
+                <div className="stat-val">+27% <span className="up-arrow">↑</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <i className="fa-solid fa-angle-right fa-2x arrow-icon" style={{ color: 'var(--accent-gold)' }}></i>
-
-        <div className="card step-box" style={{ width: '250px', border: '2px solid var(--text-primary)' }}>
-          <div style={{ background: 'var(--text-primary)', color: 'white', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', fontWeight: 'bold' }}>03</div>
-          <i className="fa-solid fa-magnifying-glass fa-2x" style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}></i>
-          <h3>Wチェック</h3>
-          <p className="sub-caption">管理者による<br/>最終検品・納品</p>
-        </div>
-
       </div>
     </div>
   );
 };
+
 export default Slide6;

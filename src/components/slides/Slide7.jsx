@@ -1,50 +1,70 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import './Slide7.css';
 
-const Slide7 = ({ isActive }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isActive) {
-      const ctx = gsap.context(() => {
-        gsap.from(".big-stat", { scale: 0.8, opacity: 0, duration: 0.8, ease: "back.out" });
-        gsap.to(".counter", { innerText: 50000, duration: 2, snap: { innerText: 100 }, ease: "power2.out", 
-          onUpdate: function() { this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerText).toLocaleString() + "<span style='font-size:2rem'>円</span>"; } 
-        });
-      }, containerRef);
-      return () => ctx.revert();
-    }
-  }, [isActive]);
-
+const Slide7 = () => {
   return (
-    <div className={`slide-container ${isActive ? 'active' : ''}`} ref={containerRef}>
-      <h2>実績は「信頼」の証</h2>
-      <div className="flex-row" style={{ marginTop: '3rem', justifyContent: 'center', gap: '5rem' }}>
-        
-        <div style={{ flex: 1, textAlign: 'right' }}>
-          <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>平均工賃実績</p>
-          <div className="big-stat text-gold" style={{ fontSize: '5rem', fontWeight: '800', lineHeight: 1 }}>
-            <span className="counter">0</span>
+    <div className="slide7-wrapper">
+      <div className="s7-header">
+        <h2>2つの収益効果</h2>
+        <p className="s7-sub-text">二重の効果で投資回収を加速</p>
+        <div className="s7-accent-line"></div>
+      </div>
+
+      <div className="s7-container">
+        {/* 効果1：コスト削減 (青テーマ) */}
+        <div className="s7-card card-blue">
+          <div className="s7-icon-circle blue-icon">
+            <i className="fa-solid fa-dollar-sign"></i>
           </div>
-          <p className="sub-caption" style={{ marginTop: '1rem' }}>全国平均の <strong style={{ color: 'var(--text-primary)', fontSize: '1.5rem' }}>2.17倍</strong></p>
+          <h3 className="s7-card-title text-blue">
+            効果①<br />人件費・工賃の省コスト化
+          </h3>
+
+          <ul className="s7-list">
+            <li><i className="fa-solid fa-check-circle text-blue"></i>ノンコア業務の人手不足を解消</li>
+            <li><i className="fa-solid fa-check-circle text-blue"></i>助成金収益で実質コストダウン</li>
+          </ul>
+
+          {/* <div className="s7-stats-box bg-blue-light">
+            <div className="stat-row">
+              <span className="label">人件費削減率</span>
+              <span className="value text-blue">約30〜50%</span>
+            </div>
+            <div className="stat-row">
+              <span className="label">年間効果</span>
+              <span className="value text-blue large">数百万円〜</span>
+            </div>
+          </div> */}
         </div>
 
-        <div style={{ width: '2px', background: '#ddd' }}></div>
+        {/* 効果2：収入増 (緑/ミントテーマ) */}
+        <div className="s7-card card-green">
+          <div className="s7-icon-circle green-icon">
+            <i className="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h3 className="s7-card-title text-green">
+            効果②<br />助成金・給付費収入
+          </h3>
 
-        <div style={{ flex: 1, textAlign: 'left', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <div style={{ marginBottom: '2rem' }}>
-            <i className="fa-solid fa-check text-gold" style={{ marginRight: '10px' }}></i>
-            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>人材定着率 98%</span>
-          </div>
-          <div style={{ marginBottom: '2rem' }}>
-            <i className="fa-solid fa-check text-gold" style={{ marginRight: '10px' }}></i>
-            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>モチベーション向上</span>
-          </div>
-          <p className="sub-caption">適正な報酬が、高品質な労働力を生む。</p>
+          <ul className="s7-list">
+            <li><i className="fa-solid fa-check-circle text-green"></i> 訓練等給付費（国保連から毎月入金）</li>
+            <li><i className="fa-solid fa-check-circle text-green"></i> 特定加算と自治体助成で安定収益</li>
+          </ul>
+
+          {/* <div className="s7-stats-box bg-green-light">
+            <div className="stat-row">
+              <span className="label">月額給付費<small>(一人当たり)</small></span>
+              <span className="value text-green">7〜12万円</span>
+            </div>
+            <div className="stat-row">
+              <span className="label">収益特性</span>
+              <span className="value text-green large">安定継続収入</span>
+            </div>
+          </div> */}
         </div>
-
       </div>
     </div>
   );
 };
+
 export default Slide7;

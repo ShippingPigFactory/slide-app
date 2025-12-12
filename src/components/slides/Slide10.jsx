@@ -1,58 +1,88 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import './Slide10.css';
 
-const Slide10 = ({ isActive }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isActive) {
-      const ctx = gsap.context(() => {
-        gsap.from(".timeline-line", { width: 0, duration: 1.5, ease: "power2.out" });
-        gsap.from(".time-point", { scale: 0, opacity: 0, stagger: 0.3, delay: 0.5, ease: "back.out" });
-      }, containerRef);
-      return () => ctx.revert();
-    }
-  }, [isActive]);
-
+const Slide10 = () => {
   return (
-    <div className={`slide-container ${isActive ? 'active' : ''}`} ref={containerRef}>
-      <h2>導入ロードマップ</h2>
-      
-      <div style={{ position: 'relative', width: '90%', marginTop: '5rem' }}>
-        {/* Line */}
-        <div className="timeline-line" style={{ position: 'absolute', top: '25px', left: 0, height: '4px', background: 'var(--text-primary)', width: '100%', zIndex: 0 }}></div>
-        
-        <div className="flex-row" style={{ justifyContent: 'space-between', position: 'relative', zIndex: 1 }}>
-          
-          <div className="time-point" style={{ textAlign: 'center' }}>
-            <div style={{ width: '50px', height: '50px', background: 'var(--bg-base)', border: '4px solid var(--text-primary)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>01</div>
-            <h3>適合診断</h3>
-            <p className="sub-caption">Month 1</p>
+    <div className="slide10-wrapper">
+      <div className="s10-header">
+        <h2>コスト削減シミュレーション</h2>
+        <p className="s10-sub-text">Before / After で見る劇的なコスト構造の改善</p>
+        <div className="s10-accent-line"></div>
+      </div>
+
+      <div className="s10-container">
+        {/* 導入前 (赤系) */}
+        <div className="s10-panel panel-before">
+          <div className="s10-panel-header">
+            <span className="badge-circle red">前</span>
+            <h3>導入前</h3>
           </div>
 
-          <div className="time-point" style={{ textAlign: 'center' }}>
-            <div style={{ width: '50px', height: '50px', background: 'var(--bg-base)', border: '4px solid var(--text-primary)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>02</div>
-            <h3>法人設立</h3>
-            <p className="sub-caption">Month 2</p>
+          <ul className="s10-cost-list">
+            <li>
+              <span className="label"><i className="fa-solid fa-money-bill-wave"></i> 人件費</span>
+              <span className="value red-text">1,800万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-handshake"></i> 外注費</span>
+              <span className="value red-text">480万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-user-plus"></i> 採用育成費</span>
+              <span className="value red-text">240万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-building"></i> 間接費</span>
+              <span className="value red-text">360万円/年</span>
+            </li>
+          </ul>
+
+          <div className="s10-total-box bg-red">
+            <span className="total-label">年間総コスト</span>
+            <span className="total-value">2,880万円</span>
+          </div>
+        </div>
+
+        {/* 矢印エリア */}
+        <div className="s10-arrow-area">
+          <div className="arrow-text">導入効果</div>
+          <i className="fa-solid fa-circle-arrow-right"></i>
+        </div>
+
+        {/* 導入後 (青系) */}
+        <div className="s10-panel panel-after">
+          <div className="s10-panel-header">
+            <span className="badge-circle blue">後</span>
+            <h3>導入後</h3>
           </div>
 
-          <div className="time-point" style={{ textAlign: 'center' }}>
-            <div style={{ width: '50px', height: '50px', background: 'var(--bg-base)', border: '4px solid var(--text-primary)', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>03</div>
-            <h3>指定申請</h3>
-            <p className="sub-caption">Month 3-5</p>
-          </div>
+          <ul className="s10-cost-list">
+            <li>
+              <span className="label"><i className="fa-solid fa-coins"></i> 最適化工賃</span>
+              <span className="value blue-text">960万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-piggy-bank"></i> 給付費収入</span>
+              <span className="value green-text">-540万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-user-shield"></i> 支援員コスト</span>
+              <span className="value blue-text">360万円/年</span>
+            </li>
+            <li>
+              <span className="label"><i className="fa-solid fa-sliders"></i> 間接費(標準化)</span>
+              <span className="value blue-text">210万円/年</span>
+            </li>
+          </ul>
 
-          <div className="time-point" style={{ textAlign: 'center' }}>
-            <div style={{ width: '50px', height: '50px', background: 'var(--accent-gold)', border: 'none', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}><i className="fa-solid fa-flag-checkered"></i></div>
-            <h3 className="text-gold">事業開始</h3>
-            <p className="sub-caption">Month 6</p>
+          <div className="s10-total-box bg-blue">
+            <span className="total-label">年間実質コスト</span>
+            <span className="total-value">990万円</span>
           </div>
-
         </div>
       </div>
-      
-      <p style={{ marginTop: '4rem', fontSize: '0.9rem' }}>※物件選定から開始まで約半年が目安です。</p>
     </div>
   );
 };
+
 export default Slide10;

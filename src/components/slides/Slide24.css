@@ -1,0 +1,149 @@
+.slide24-wrapper {
+    width: 100%;
+    animation: fadeInSlide 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s24-header {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.s24-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.s24-sub-text {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.s24-vision-compare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+.v-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.current {
+    border-left: 8px solid #D32F2F;
+}
+
+.ideal {
+    border-left: 8px solid #00C853;
+}
+
+.v-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.current h3 {
+    color: #D32F2F;
+}
+
+.ideal h3 {
+    color: #00C853;
+}
+
+.v-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.v-card li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.current li i {
+    color: #D32F2F;
+    margin-top: 4px;
+}
+
+.ideal li i {
+    color: #00C853;
+    margin-top: 4px;
+}
+
+.v-arrow {
+    font-size: 3rem;
+    color: #00A0E9;
+}
+
+/* 成長イメージ */
+.s24-future-image {
+    background: #fff;
+    width: 90%;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.s24-future-image h3 {
+    color: #0044CC;
+    margin-bottom: 1rem;
+}
+
+.s24-chart-placeholder {
+    height: 120px;
+    position: relative;
+    width: 100%;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.future-chart {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.s24-result-box {
+    align-self: flex-end;
+    background: #E3F2FD;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: -40px;
+    /* グラフに重ねる */
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.s24-result-box .highlight {
+    font-size: 1.3rem;
+    color: #0044CC;
+    margin-left: 5px;
+}

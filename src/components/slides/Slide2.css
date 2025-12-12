@@ -1,0 +1,96 @@
+.slide2-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInSlide 0.6s ease-out;
+}
+
+.s2-header {
+    margin-bottom: 2rem;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.s2-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.s2-sub-text {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.s2-accent-line {
+    width: 100px;
+    height: 6px;
+    background-color: #00A0E9;
+}
+
+/* グリッド設定 (3列均等配置) */
+.s2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+/* カードスタイル */
+.s2-card {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* 高さを揃える */
+}
+
+.s2-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #00A0E9;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.s2-card h3 {
+    color: #0044CC;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.s2-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* フッターバナー */
+.s2-banner {
+    width: 95%;
+    background: #224488;
+    color: #fff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}

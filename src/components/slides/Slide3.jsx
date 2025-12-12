@@ -1,53 +1,85 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import './Slide3.css';
 
-const Slide3 = ({ isActive }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isActive) {
-      const ctx = gsap.context(() => {
-        gsap.from(".option-card", { y: 50, opacity: 0, duration: 0.6, stagger: 0.2 });
-        gsap.from(".x-mark", { scale: 0, opacity: 0, delay: 1, duration: 0.5, ease: "back.out" });
-      }, containerRef);
-      return () => ctx.revert();
-    }
-  }, [isActive]);
-
+const Slide3 = () => {
   return (
-    <div className={`slide-container ${isActive ? 'active' : ''}`} ref={containerRef}>
-      <h2>既存の選択肢は「帯に短し...」</h2>
-      <div className="flex-row" style={{ marginTop: '2rem', alignItems: 'stretch' }}>
-        
-        {/* Option 1 */}
-        <div className="card option-card" style={{ flex: 1, position: 'relative' }}>
-          <div className="x-mark" style={{ position: 'absolute', top: '-20px', right: '-20px', background: '#e74c3c', color: 'white', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}><i className="fa-solid fa-xmark"></i></div>
-          <i className="fa-solid fa-people-arrows fa-3x" style={{ color: '#95a5a6', marginBottom: '1.5rem' }}></i>
-          <h3>派遣・パート</h3>
-          <p style={{ color: '#e74c3c', fontWeight: 'bold', marginTop: '1rem' }}>コスト高・離職</p>
-          <p className="sub-caption">単価上昇が止まらず、<br/>定着もしない</p>
+    <div className="slide3-wrapper">
+      <div className="s3-header">
+        <h2>人件費高騰 × 人手不足の深刻な現実</h2>
+        <p className="s3-sub-text">データで見るノンコア業務のコスト構造硬直化</p>
+        <div className="s3-accent-line"></div>
+      </div>
+
+      <div className="s3-charts-container">
+        {/* 左グラフ */}
+        <div className="s3-chart-box">
+          <div className="s3-chart-title">
+            <span className="s3-icon">¥</span> 最低賃金の上昇トレンド
+          </div>
+          <div className="s3-chart-content">
+            <div className="s3-line-chart">
+              {/* 簡易SVGグラフ */}
+              <svg viewBox="0 0 300 150" className="chart-svg">
+                <polyline
+                  points="10,130 60,110 120,90 180,75 240,45 290,15"
+                  fill="none" stroke="#2b7ae0" strokeWidth="4"
+                />
+                <circle cx="10" cy="130" r="4" fill="#2b7ae0" />
+                <circle cx="290" cy="15" r="4" fill="#2b7ae0" />
+              </svg>
+              <div className="s3-x-axis">
+                <span>2016</span><span>2023</span>
+              </div>
+            </div>
+            <div className="s3-legend">
+              <span className="dot blue"></span> 全国平均最低賃金(円)
+            </div>
+            <p className="s3-note">※2016年から継続的な上昇により、5年間で約20%増加</p>
+          </div>
         </div>
 
-        {/* Option 2 */}
-        <div className="card option-card" style={{ flex: 1, position: 'relative' }}>
-          <div className="x-mark" style={{ position: 'absolute', top: '-20px', right: '-20px', background: '#e74c3c', color: 'white', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}><i className="fa-solid fa-xmark"></i></div>
-          <i className="fa-solid fa-robot fa-3x" style={{ color: '#95a5a6', marginBottom: '1.5rem' }}></i>
-          <h3>ロボット・AI</h3>
-          <p style={{ color: '#e74c3c', fontWeight: 'bold', marginTop: '1rem' }}>投資回収・硬直</p>
-          <p className="sub-caption">初期投資が過大で、<br/>柔軟性がない</p>
+        {/* 右グラフ */}
+        <div className="s3-chart-box">
+          <div className="s3-chart-title">
+            <span className="s3-icon"><i className="fa-solid fa-user"></i></span> 有効求人倍率の高止まり
+          </div>
+          <div className="s3-chart-content">
+            <div className="s3-bar-chart">
+              {[1, 2, 3, 4].map((i) => (
+                <div className="bar-group" key={i}>
+                  <div className="bar blue" style={{ height: `${30 + i * 5}%` }}></div>
+                  <div className="bar orange" style={{ height: `${50 + i * 8}%` }}></div>
+                </div>
+              ))}
+            </div>
+            <div className="s3-legend">
+              <span className="dot blue"></span> 全業種
+              <span className="dot orange"></span> 物流・倉庫業
+            </div>
+            <p className="s3-note">※コロナ禍を経て再び上昇傾向、特に物流業界は深刻</p>
+          </div>
         </div>
+      </div>
 
-        {/* Option 3 (Solution) */}
-        <div className="card option-card" style={{ flex: 1, border: '2px solid var(--accent-gold)', background: '#fffcf5' }}>
-          <div style={{ position: 'absolute', top: '-20px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-gold)', color: 'white', padding: '5px 20px', borderRadius: '20px', fontWeight: 'bold' }}>ANSWER</div>
-          <i className="fa-solid fa-hand-holding-heart fa-3x text-gold" style={{ marginBottom: '1.5rem' }}></i>
-          <h3 className="text-gold">福祉スキーム</h3>
-          <p className="text-gold" style={{ fontWeight: 'bold', marginTop: '1rem' }}>低コスト・安定</p>
-          <p className="sub-caption">公的支援を活用し、<br/>安価で安定確保</p>
+      <div className="s3-stats-row">
+        <div className="s3-stat">
+          <h4>物流・出荷業務の人員不足率</h4>
+          <div className="stat-val">38.7%</div>
+          <p>全業種平均より12.3%高い</p>
         </div>
-
+        <div className="s3-stat border-sides">
+          <h4>人件費上昇による粗利益への影響</h4>
+          <div className="stat-val">▲8.2%</div>
+          <p>過去3年間の平均削減幅</p>
+        </div>
+        <div className="s3-stat">
+          <h4>コスト構造硬直化による事業リスク</h4>
+          <div className="stat-val">76.3%</div>
+          <p>中小企業が「大きな課題」と回答</p>
+        </div>
       </div>
     </div>
   );
 };
+
 export default Slide3;

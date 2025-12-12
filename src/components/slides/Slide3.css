@@ -1,0 +1,190 @@
+.slide3-wrapper {
+    width: 100%;
+    animation: fadeInSlide 0.6s ease-out;
+}
+
+.s3-header {
+    margin-bottom: 2rem;
+}
+
+.s3-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.s3-sub-text {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.s3-accent-line {
+    width: 100px;
+    height: 6px;
+    background-color: #00A0E9;
+}
+
+/* グラフエリア */
+.s3-charts-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.s3-chart-box {
+    flex: 1;
+    background: #fff;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.s3-chart-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #00A0E9;
+    padding-left: 10px;
+}
+
+.s3-icon {
+    margin-right: 10px;
+    color: #0044CC;
+    width: 20px;
+    text-align: center;
+}
+
+/* グラフの中身 */
+.s3-chart-content {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 折れ線グラフ */
+.s3-line-chart {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.chart-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.s3-x-axis {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    padding-top: 5px;
+}
+
+/* 棒グラフ */
+.s3-bar-chart {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.bar-group {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.bar {
+    width: 100%;
+}
+
+.bar.blue {
+    background: #4A90E2;
+}
+
+.bar.orange {
+    background: #F5A623;
+}
+
+/* 凡例 */
+.s3-legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dot.blue {
+    background: #4A90E2;
+}
+
+.dot.orange {
+    background: #F5A623;
+}
+
+.s3-note {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* 下部スタッツ */
+.s3-stats-row {
+    background: #fff;
+    color: #333;
+    display: flex;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.s3-stat {
+    flex: 1;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.s3-stat.border-sides {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.s3-stat h4 {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.s3-stat .stat-val {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00A0E9;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.s3-stat p {
+    font-size: 0.8rem;
+    color: #666;
+}

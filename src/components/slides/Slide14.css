@@ -26,10 +26,9 @@
 }
 
 .s14-accent-line {
-    width: 100%;
-    height: 2px;
-    background-color: #002B5B;
-    margin-bottom: 2rem;
+    width: 100px;
+    height: 6px;
+    background-color: #00A0E9;
 }
 
 .s14-table-container {

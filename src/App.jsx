@@ -51,7 +51,7 @@ function App() {
     // <Slide10 key="slide10" />,
     // <Slide11 key="slide11" />,
     // <Slide12 key="slide12" />,
-    // <Slide13 key="slide13" />,
+    <Slide13 key="slide13" />,
     <Slide14 key="slide14" />,
     <Slide15 key="slide15" />,
     // <Slide16 key="slide16" />,

@@ -1,14 +1,20 @@
 .slide13-wrapper {
     width: 100%;
     animation: fadeInSlide 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .s13-header {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: left;
+    width: 100%;
+    padding-left: 3rem;
 }
 
 .s13-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -25,202 +31,101 @@
     background-color: #00A0E9;
 }
 
-.s13-grid {
+/* コンテナ */
+.s13-service-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: stretch;
+    /* 高さを揃える */
+    gap: 30px;
+    width: 95%;
+    padding: 0 20px;
 }
 
-.s13-card {
+/* サービスカード */
+.s13-service-card {
     flex: 1;
     background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.card-header-blue {
-    background: #0044CC;
-    color: #fff;
-    padding: 1rem;
-    font-weight: bold;
+    color: #333;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
     text-align: center;
-}
-
-.card-header-green {
-    background: #00C853;
-    color: #fff;
-    padding: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.card-header-purple {
-    background: #7E57C2;
-    color: #fff;
-    padding: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.s13-content-box {
-    padding: 1.5rem;
-    text-align: center;
-    flex-grow: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #333;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.big-number {
-    font-size: 3.5rem;
+.s13-service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 上部のアクセントバー */
+.s13-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #00A0E9, #0044CC);
+}
+
+/* アイコン */
+.s13-icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.color-cyan {
+    background: #00BCD4;
+}
+
+.color-blue {
+    background: #2196F3;
+}
+
+.color-navy {
+    background: #3F51B5;
+}
+
+/* タイトル */
+.s13-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #002B5B;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    position: relative;
+    width: 100%;
+}
+
+.s13-card-title .num {
+    display: block;
+    font-size: 1rem;
+    color: #ccc;
     font-weight: 900;
-    line-height: 1;
+    letter-spacing: 2px;
     margin-bottom: 5px;
 }
 
-.big-number .unit {
-    font-size: 1.2rem;
-    margin-left: 5px;
+/* 説明文 */
+.s13-card-desc {
+    font-size: 1rem;
     color: #555;
-}
-
-.text-blue {
-    color: #0044CC;
-}
-
-.text-green {
-    color: #00C853;
-}
-
-.text-purple {
-    color: #7E57C2;
-}
-
-.desc-small {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Chart Areas */
-.chart-bar-area {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 20px;
-    height: 120px;
+    line-height: 1.8;
+    text-align: left;
+    /* 読みやすさのため左寄せ */
     width: 100%;
-    margin-top: auto;
-}
-
-.bar-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: flex-end;
-    width: 100px;
-}
-
-.bar {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-}
-
-.bar.gray {
-    background: #999;
-}
-
-.bar.blue {
-    background: #0044CC;
-}
-
-.label {
-    font-size: 0.7rem;
-    margin-top: 5px;
-}
-
-.chart-line-area {
-    width: 100%;
-    height: 120px;
-    margin-top: auto;
-}
-
-.simple-line-chart {
-    width: 100%;
-    height: 80%;
-    overflow: visible;
-}
-
-.chart-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
-    color: #666;
-}
-
-.chart-donut-area {
-    width: 100px;
-    height: 100px;
-    margin-top: auto;
-    position: relative;
-}
-
-.donut-chart {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-}
-
-.donut-hole {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 60%;
-    height: 60%;
-    background: #fff;
-    border-radius: 50%;
-}
-
-.donut-legend {
-    font-size: 0.8rem;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.dot.purple {
-    width: 10px;
-    height: 10px;
-    background: #7E57C2;
-    display: inline-block;
-}
-
-/* Footer Tag */
-.s13-footer-tag {
-    padding: 0.8rem;
-    text-align: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.s13-footer-tag.blue {
-    background: #E3F2FD;
-    color: #0044CC;
-}
-
-.s13-footer-tag.green {
-    background: #E8F5E9;
-    color: #00C853;
-}
-
-.s13-footer-tag.purple {
-    background: #F3E5F5;
-    color: #7E57C2;
 }

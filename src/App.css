@@ -176,7 +176,7 @@ body {
 }
 
 .logo-style-neon i {
-  color: #fff;
+  color: #f0ff66;
   filter: drop-shadow(0 0 5px #00E5FF);
   animation: pulseNeon 2s infinite alternate;
 }

@@ -26,8 +26,12 @@ const Slide17 = () => {
                         {/* <span className="note">(最低月額：12万円〜)</span> */}
                     </div>
                     <div className="value-info">
-                        <span className="label">初回監査前に弊社監査部による<br />模擬検査付随</span>
+                        <span className="label">初回監査前に弊社監査部による<br />模擬検査実施</span>
                         {/* <span className="val-text">グループ全体の<br />収益構造改革</span> */}
+                    </div>
+                    <div className="period-info">
+                        <span className="label">福祉関連法規変更への随時対応</span>
+                        {/* <span className="val">10万(税別) + 交通費</span> */}
                     </div>
                 </div>
 
@@ -48,8 +52,8 @@ const Slide17 = () => {
                         {/* アイコンを募集向けに変更 */}
                         <div className="icon-box premium-icon"><i className="fa-solid fa-bullhorn"></i></div>
                         <div className="text-box">
-                            <h4>利用者募集の伴走支援</h4>
-                            <p>行政機関や相談支援事業所との関係構築を主導し、安定的な利用者確保に向けた広報戦略の立案と実行をサポートします。</p>
+                            <h4>高度な業務切り出し・工程設計（ジョブデザイン）</h4>
+                            <p>母体事業の複雑な業務を、障がい特性に合わせて遂行可能なレベルまで細分化・構造化（マニュアル化）し、現場が自走できる業務フローを構築・提供します。</p>
                         </div>
                     </div>
                 </div>

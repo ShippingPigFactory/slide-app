@@ -82,7 +82,7 @@ function App() {
 
   // ロゴ切り替え関数
   const toggleLogoStyle = () => {
-    setLogoStyleIndex((prev) => (prev + 1) % 4);
+    // setLogoStyleIndex((prev) => (prev + 1) % 4);
   };
 
   // ロゴコンポーネントのレンダリング

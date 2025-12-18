@@ -170,7 +170,7 @@
 }
 
 .exp-list li span::after {
-    content: '万';
+    content: '万円';
     font-size: 0.8rem;
     color: #888;
 }
@@ -191,7 +191,7 @@
 }
 
 .exp-single-val::after {
-    content: '万';
+    content: '万円';
     font-size: 0.9rem;
     color: #555;
     margin-left: 2px;

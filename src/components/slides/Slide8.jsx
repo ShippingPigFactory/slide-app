@@ -8,9 +8,8 @@ const Slide8 = () => {
   // 支出1: スタッフ人件費
   const costStaff = {
     sabikan: 30,
-    vocational: 20,
-    life: 20,
-    instructor: 20
+    vocational: 40,
+    life: 40,
   };
   const totalStaffCost = Object.values(costStaff).reduce((a, b) => a + b, 0); // 90万円
 
@@ -65,12 +64,11 @@ const Slide8 = () => {
             <div className="exp-card">
               <div className="exp-title">スタッフ人件費</div>
               <ul className="exp-list">
-                <li>サビ管 <span>{costStaff.sabikan}</span></li>
-                <li>職業指導 <span>{costStaff.vocational}</span></li>
-                <li>生活支援 <span>{costStaff.life}</span></li>
-                <li>賃金向上 <span>{costStaff.instructor}</span></li>
+                <li>サービス管理者<span>{costStaff.sabikan}</span></li>
+                <li>職業指導員 × 2<span>{costStaff.vocational}</span></li>
+                <li>生活支援員 × 2<span>{costStaff.life}</span></li>
               </ul>
-              <div className="exp-subtotal">計 {totalStaffCost}万</div>
+              <div className="exp-subtotal">計 {totalStaffCost}万円</div>
             </div>
 
             {/* 利用者 */}
@@ -80,19 +78,19 @@ const Slide8 = () => {
                 <li>A型(10名) <span>{costUser.typeA}</span></li>
                 <li>B型(10名) <span>{costUser.typeB}</span></li>
               </ul>
-              <div className="exp-subtotal">計 {totalUserCost}万</div>
+              <div className="exp-subtotal">計 {totalUserCost}万円</div>
             </div>
 
             {/* 家賃・光熱費 */}
             <div className="exp-card mini">
               <div className="exp-title">家賃・光熱費等</div>
-              <div className="exp-single-val">{costFacility}万</div>
+              <div className="exp-single-val">{costFacility}</div>
             </div>
 
             {/* 諸経費 */}
             <div className="exp-card mini">
               <div className="exp-title">諸経費</div>
-              <div className="exp-single-val">{costMisc}万</div>
+              <div className="exp-single-val">{costMisc}</div>
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ const Slide17 = () => {
                         <div className="icon-box premium-icon"><i className="fa-solid fa-chalkboard-user"></i></div>
                         <div className="text-box">
                             <h4>スタッフ研修・OJT</h4>
-                            <p>専任コンサルタントによる現場スタッフへの直接指導や、管理者向けの運営ノウハウ研修を実施し、サービスの質を早期に安定化させます。</p>
+                            <p>業務ルールを設計し、専任コンサルタントによる利用者への直接指導を実施。<br />サービスの質を早期に安定化させます。</p>
                         </div>
                     </div>
 
@@ -49,8 +49,8 @@ const Slide17 = () => {
                         {/* アイコンを募集向けに変更 */}
                         <div className="icon-box premium-icon"><i className="fa-solid fa-bullhorn"></i></div>
                         <div className="text-box">
-                            <h4>高度な業務切り出し・工程設計（ジョブデザイン）</h4>
-                            <p>母体事業の複雑な業務を、障がい特性に合わせて遂行可能なレベルまで細分化・構造化（マニュアル化）し、現場が自走できる業務フローを構築・提供します。</p>
+                            <h4>パートナー企業からの委託業務を斡旋</h4>
+                            <p>提携している外部パートナー企業からの業務を斡旋することにより、繁忙期以外の利用者さんの作業を安定して提供します。</p>
                         </div>
                     </div>
                 </div>

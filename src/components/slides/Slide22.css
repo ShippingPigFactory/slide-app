@@ -107,3 +107,69 @@
     color: #999;
     margin-right: 5px;
 }
+
+.s22-table-wrapper {
+    width: 90%;
+    padding: 20px 0; /* 上下に余白を作って浮遊感を出す */
+}
+
+.s22-table {
+    border-collapse: separate; /* 境界線を分離させて個別の装飾を可能にする */
+    border-spacing: 0;
+    overflow: visible; /* 影がはみ出せるようにする */
+}
+
+/* 「当社の強み」カラム全体の強調 */
+.th-us, .td-good {
+    position: relative;
+    z-index: 10;
+    /* 左右の枠線を太くして独立感を出す */
+    border-left: 2px solid #00A0E9 !important;
+    border-right: 2px solid #00A0E9 !important;
+}
+
+/* ヘッダー部分の強調（ネオン光） */
+.th-us {
+    background: linear-gradient(180deg, #0055ff, #0044CC) !important;
+    transform: scale(1.05); /* 少し大きくする */
+    border-top: 2px solid #00A0E9 !important;
+    border-radius: 8px 8px 0 0; /* 角を丸くして独立感を出す */
+    box-shadow: 0 -10px 20px rgba(0, 160, 233, 0.4), 0 0 15px rgba(0, 160, 233, 0.6); /* 上方向へのネオン光 */
+}
+
+/* ボディ部分の強調（フローティング） */
+.td-good {
+    transform: scale(1.05); /* 少し大きくする */
+    background-color: #f0f7ff !important; /* 背景をわずかに明るくして際立たせる */
+    box-shadow: 15px 0 30px rgba(0, 0, 0, 0.1), -15px 0 30px rgba(0, 0, 0, 0.1); /* 左右に影を入れて浮かす */
+    border-bottom: 1px solid #ddd;
+}
+
+/* 一番下のセルの角を丸くする */
+tr:last-child .td-good {
+    border-bottom: 2px solid #00A0E9 !important;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 20px rgba(0, 160, 233, 0.3), 15px 0 30px rgba(0, 0, 0, 0.1), -15px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 強調テキストのさらなる装飾 */
+.td-good strong {
+    color: #0044CC;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px rgba(0, 160, 233, 0.2);
+}
+
+.recommend-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcf00; /* ゴールドっぽい黄色 */
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 20;
+}

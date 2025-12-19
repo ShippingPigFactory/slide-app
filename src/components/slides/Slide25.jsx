@@ -38,7 +38,7 @@ const Slide25 = () => {
 
       <div className="s25-footer-area">
         <div className="contact-info">
-          <h3>stera star株式会社 (stera rehope株式会社)</h3>
+          <h3>stera star株式会社</h3>
           <div style={{ display: 'flex', flexDirection: 'row', gap: '.5rem' }}>
             <span>所在地: </span><p>〒779-3303<br />徳島県吉野川市川島町山田字芝生106</p></div>
           <p>営業時間: 平日 9:00〜17:00</p>

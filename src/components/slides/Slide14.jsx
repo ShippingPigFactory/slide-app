@@ -53,7 +53,7 @@ const Slide14 = () => {
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>
                         <tr>
-                            <td className="td-label">利用者募集の伴走支援</td>
+                            <td className="td-label">業務の斡旋</td>
                             <td className="td-check"></td>
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>

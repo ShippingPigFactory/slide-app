@@ -67,7 +67,7 @@ function App() {
       </div>
 
       {/* ナビゲーション */}
-      <div className="nav-controls">
+      {/* <div className="nav-controls">
         <button
           className="nav-btn"
           onClick={handlePrev}
@@ -82,7 +82,7 @@ function App() {
         >
           <i className="fa-solid fa-chevron-right"></i>
         </button>
-      </div>
+      </div> */}
 
       <div className="page-indicator">
         {currentPage + 1} / {slides.length}

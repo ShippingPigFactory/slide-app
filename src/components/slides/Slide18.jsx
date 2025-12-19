@@ -36,7 +36,7 @@ const Slide18 = () => {
             <span className="price-unit">万円(税別)</span>
             <span className="price-note">+ 交通費</span>
           </div>
-          <p className="s18-desc">募集戦略の立案から面接・定着までを<br />サポート</p>
+          <p className="s18-desc">募集戦略の立案から関係各所への同行・<br />見学会の開催などをサポート</p>
         </div>
 
         {/* Option 3: 業務提携支援 */}
@@ -50,7 +50,7 @@ const Slide18 = () => {
             <span className="price-unit">万円(税別)</span>
             <span className="price-note">+ 交通費</span>
           </div>
-          <p className="s18-desc">外部企業とのパートナーシップ構築を<br />支援</p>
+          <p className="s18-desc">外部企業とのパートナーシップ構築を<br />支援・仕組化をサポート</p>
         </div>
       </div>
     </div>

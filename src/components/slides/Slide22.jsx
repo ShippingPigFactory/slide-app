@@ -15,7 +15,10 @@ const Slide22 = () => {
           <thead>
             <tr>
               <th className="th-item">比較項目</th>
-              <th className="th-us">当社の強み</th>
+              <th className="th-us">
+                <div className="recommend-label">RECOMMEND</div>
+                  当社の強み
+                </th>
               <th className="th-others">一般的な他社</th>
             </tr>
           </thead>
@@ -23,7 +26,9 @@ const Slide22 = () => {
             <tr>
               <td className="td-head">ノウハウの実証性</td>
               <td className="td-good">
-                <strong>全国平均の2.17倍工賃を実現</strong><br />利用者の技能・生産性向上をサポート
+                <i className="fa-solid fa-circle-check" style={{color: '#00A0E9', marginRight: '8px'}}></i>
+                <strong>全国平均の約2.5倍の工賃を実現</strong>
+                <br />ステップアップ支援により<br />利用者の技能・生産性向上をサポート
               </td>
               <td className="td-bad">
                 <div className="td-wrapper">

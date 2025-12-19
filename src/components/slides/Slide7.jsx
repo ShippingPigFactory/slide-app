@@ -24,17 +24,6 @@ const Slide7 = () => {
             <li><i className="fa-solid fa-check-circle text-blue"></i>ノンコア業務の人手不足を解消</li>
             <li><i className="fa-solid fa-check-circle text-blue"></i>助成金収益で実質コストダウン</li>
           </ul>
-
-          {/* <div className="s7-stats-box bg-blue-light">
-            <div className="stat-row">
-              <span className="label">人件費削減率</span>
-              <span className="value text-blue">約30〜50%</span>
-            </div>
-            <div className="stat-row">
-              <span className="label">年間効果</span>
-              <span className="value text-blue large">数百万円〜</span>
-            </div>
-          </div> */}
         </div>
 
         {/* 効果2：収入増 (緑/ミントテーマ) */}
@@ -50,17 +39,6 @@ const Slide7 = () => {
             <li><i className="fa-solid fa-check-circle text-green"></i> 訓練等給付費（国保連から毎月入金）</li>
             <li><i className="fa-solid fa-check-circle text-green"></i> 特定加算と自治体助成で安定収益</li>
           </ul>
-
-          {/* <div className="s7-stats-box bg-green-light">
-            <div className="stat-row">
-              <span className="label">月額給付費<small>(一人当たり)</small></span>
-              <span className="value text-green">7〜12万円</span>
-            </div>
-            <div className="stat-row">
-              <span className="label">収益特性</span>
-              <span className="value text-green large">安定継続収入</span>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

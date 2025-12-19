@@ -23,15 +23,12 @@ const Slide17 = () => {
                     <div className="royalty-info">
                         <span className="label">月額ロイヤリティ</span>
                         <span className="rate">10%</span>
-                        {/* <span className="note">(最低月額：12万円〜)</span> */}
                     </div>
                     <div className="value-info">
                         <span className="label">初回監査前に弊社監査部による<br />模擬検査実施</span>
-                        {/* <span className="val-text">グループ全体の<br />収益構造改革</span> */}
                     </div>
                     <div className="period-info">
                         <span className="label">福祉関連法規変更への随時対応</span>
-                        {/* <span className="val">10万(税別) + 交通費</span> */}
                     </div>
                 </div>
 

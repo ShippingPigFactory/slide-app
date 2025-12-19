@@ -22,9 +22,6 @@ function App() {
   // 現在のページ番号（0始まり）
   const [currentPage, setCurrentPage] = useState(0);
 
-  // ロゴデザインの状態管理 (0:Glass, 1:Neon, 2:Tech, 3:Ribbon)
-  const [logoStyleIndex, setLogoStyleIndex] = useState(1);
-
   // 表示するスライドのリスト
   const slides = [
     <Slide1 key="slide1" />,
@@ -57,50 +54,12 @@ function App() {
     }
   };
 
-  // ロゴ切り替え関数
-  const toggleLogoStyle = () => {
-    // setLogoStyleIndex((prev) => (prev + 1) % 4);
-  };
-
-  // ロゴコンポーネントのレンダリング
-  const renderLogo = () => {
-    switch (logoStyleIndex) {
-      case 0: // 案1: フロストグラス
-        return (
-          <div className="logo-container logo-style-glass" onClick={toggleLogoStyle} title="クリックでデザイン切替">
-            <i className="fa-solid fa-star"></i> stera star
-          </div>
-        );
-      case 1: // 案2: ネオン
-        return (
-          <div className="logo-container logo-style-neon" onClick={toggleLogoStyle} title="クリックでデザイン切替">
-            STERA STAR<i className="fa-regular fa-star"></i>
-          </div>
-        );
-      case 2: // 案3: テックタブ
-        return (
-          <div className="logo-container logo-style-tech" onClick={toggleLogoStyle} title="クリックでデザイン切替">
-            <span>stera star</span>
-            <span className="sub">REHOPE</span>
-          </div>
-        );
-      default: // 元のリボン
-        return (
-          <div className="logo-container logo-style-ribbon" onClick={toggleLogoStyle} title="クリックでデザイン切替">
-            stera star
-          </div>
-        );
-    }
-  };
-
   return (
     <div className="app-container">
-      {/* 共通パーツ */}
-      {/* <div className="fixed-ribbon">
-        <img src={`${Logo}`} alt="sterastarlogo" />
-      </div> */}
-      {/* ロゴ表示 (クリックで切り替わります) */}
-      {renderLogo()}
+            {/* ロゴ表示 (クリックで切り替わります) */}
+      <div className="logo-container logo-style-neon">
+        STERA STAR<i className="fa-regular fa-star"></i>
+      </div>
 
       {/* スライド表示エリア：現在のページだけを描画 */}
       <div className="slide-display-area">

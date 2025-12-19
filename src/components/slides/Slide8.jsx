@@ -2,34 +2,6 @@ import React from 'react';
 import './Slide8.css';
 
 const Slide8 = () => {
-  // --- 条件設定 ---
-  const revenueTotal = 400; // 収入 (万円)
-
-  // 支出1: スタッフ人件費
-  const costStaff = {
-    sabikan: 30,
-    vocational: 40,
-    life: 40,
-  };
-  const totalStaffCost = Object.values(costStaff).reduce((a, b) => a + b, 0); // 90万円
-
-  // 支出2: 利用者賃金・工賃
-  const costUser = {
-    typeA: 90, // 10名
-    typeB: 50  // 10名
-  };
-  const totalUserCost = costUser.typeA + costUser.typeB; // 140万円
-
-  // 支出3: その他経費 (追加)
-  const costFacility = 30; // 家賃光熱費等
-  const costMisc = 30;     // 諸経費
-
-  // 支出合計
-  const totalExpense = totalStaffCost + totalUserCost + costFacility + costMisc; // 290万円
-
-  // 利益 (手残り)
-  const profit = revenueTotal - totalExpense; // 110万円
-
   return (
     <div className="slide8-wrapper">
       <div className="s8-header">
@@ -46,7 +18,7 @@ const Slide8 = () => {
             <span className="badge-icon"><i className="fa-solid fa-sack-dollar"></i> サービス報酬</span>
           </div>
           <div className="sec-value">
-            {revenueTotal}<span className="unit">万円</span>
+            400<span className="unit">万円</span>
           </div>
         </div>
 
@@ -56,7 +28,7 @@ const Slide8 = () => {
         <div className="s8-section expense-section">
           <div className="expense-header">
             <span className="badge-icon red"><i className="fa-solid fa-money-bill-transfer"></i> 支出計</span>
-            <span className="header-val">{totalExpense}<span className="unit-s">万円</span></span>
+            <span className="header-val">310<span className="unit-s">万円</span></span>
           </div>
 
           <div className="expense-grid">
@@ -64,33 +36,33 @@ const Slide8 = () => {
             <div className="exp-card">
               <div className="exp-title">スタッフ人件費</div>
               <ul className="exp-list">
-                <li>サービス管理者<span>{costStaff.sabikan}</span></li>
-                <li>職業指導員 × 2<span>{costStaff.vocational}</span></li>
-                <li>生活支援員 × 2<span>{costStaff.life}</span></li>
+                <li>サービス管理者<span>30</span></li>
+                <li>職業指導員 × 2<span>40</span></li>
+                <li>生活支援員 × 2<span>40</span></li>
               </ul>
-              <div className="exp-subtotal">計 {totalStaffCost}万円</div>
+              <div className="exp-subtotal">計 110万円</div>
             </div>
 
             {/* 利用者 */}
             <div className="exp-card">
               <div className="exp-title">利用者工賃</div>
               <ul className="exp-list">
-                <li>A型(10名) <span>{costUser.typeA}</span></li>
-                <li>B型(10名) <span>{costUser.typeB}</span></li>
+                <li>A型(10名) <span>90</span></li>
+                <li>B型(10名) <span>50</span></li>
               </ul>
-              <div className="exp-subtotal">計 {totalUserCost}万円</div>
+              <div className="exp-subtotal">計 140万円</div>
             </div>
 
             {/* 家賃・光熱費 */}
             <div className="exp-card mini">
               <div className="exp-title">家賃・光熱費等</div>
-              <div className="exp-single-val">{costFacility}</div>
+              <div className="exp-single-val">30</div>
             </div>
 
             {/* 諸経費 */}
             <div className="exp-card mini">
               <div className="exp-title">諸経費</div>
-              <div className="exp-single-val">{costMisc}</div>
+              <div className="exp-single-val">30</div>
             </div>
           </div>
         </div>
@@ -103,10 +75,10 @@ const Slide8 = () => {
             <span className="badge-icon gold"><i className="fa-solid fa-gem"></i> 営業利益</span>
           </div>
           <div className="sec-value">
-            {profit}<span className="unit">万円</span>
+            90<span className="unit">万円</span>
           </div>
           <div className="profit-annual">
-            年間効果：約 {(profit * 12).toLocaleString()}万円
+            年間効果：約 1,080万円
           </div>
         </div>
 

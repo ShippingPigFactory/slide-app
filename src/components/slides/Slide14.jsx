@@ -16,7 +16,6 @@ const Slide14 = () => {
                         <tr>
                             <th className="th-header">提供価値</th>
                             <th className="th-plan plan-basic">ベーシックプラン</th>
-                            {/* <th className="th-plan plan-standard">スタンダードプラン</th> */}
                             <th className="th-plan plan-premium">プレミアムプラン</th>
                         </tr>
                     </thead>
@@ -30,38 +29,32 @@ const Slide14 = () => {
                         <tr>
                             <td className="td-label">月額ロイヤリティ</td>
                             <td className="td-val">3%</td>
-                            {/* <td className="td-val highlight">5〜7%<br /><span className="small">(最低8万円〜)</span></td> */}
                             <td className="td-val">10%</td>
                         </tr>
                         <tr>
                             <td className="td-label">ゴール</td>
                             <td className="td-val bold">設立・開設</td>
-                            {/* <td className="td-val bold">安定稼働</td> */}
                             <td className="td-val bold">価値最大化</td>
                         </tr>
                         <tr className="tr-divider"><td colSpan="4">提供サービス内容</td></tr>
                         <tr>
                             <td className="td-label">設立・許認可サポート</td>
                             <td className="td-check"><div className="circle-check"></div></td>
-                            {/* <td className="td-check"><div className="circle-check"></div></td> */}
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>
                         <tr>
                             <td className="td-label">マニュアル・雛形提供</td>
                             <td className="td-check"><div className="circle-check"></div></td>
-                            {/* <td className="td-check"><div className="circle-check"></div></td> */}
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>
                         <tr>
                             <td className="td-label">スタッフ研修・OJT</td>
                             <td className="td-check"></td>
-                            {/* <td className="td-check"><div className="circle-check"></div></td> */}
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>
                         <tr>
                             <td className="td-label">利用者募集の伴走支援</td>
                             <td className="td-check"></td>
-                            {/* <td className="td-check"><div className="circle-check"></div></td> */}
                             <td className="td-check"><div className="circle-check"></div></td>
                         </tr>
                     </tbody>
